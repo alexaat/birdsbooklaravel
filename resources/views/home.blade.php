@@ -13,13 +13,13 @@
         @foreach($posts as $post)
         <div>
             <div class='post-header'>
-                {{ $post['user_id'] }} -  {{ $post['created'] }}
+                {{ $post -> user_id }} -  {{ $post -> created }}
             </div>
             <div class='post-content'>
-                <img src="images/{{$post['image']}}">
+                <img src="images/{{$post -> image }}">
             </div>
             <div class='post-footer'>
-                {{ $post['content'] }}
+                {{ $post -> content }}
             </div>
         </div>
         @endforeach
