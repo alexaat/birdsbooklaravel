@@ -9,14 +9,13 @@
 
     </head>
     <body>
-        <form action='/posts/create' method='POST'>
+        <form action='/posts/create' method='POST' enctype='multipart/form-data'>
             @csrf
+            <input type='file' name='file' accept="image/*">
             <textarea name='content'>
             </textarea>
             <input type='submit' value='POST'>
         </form>
-
-
     </body>
 </html>
 
