@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-        <link href='css/styles.css' rel='stylesheet' />
-
-    </head>
-    <body>
-
-        @foreach($posts as $post)
-        <div>
-            <div class='post-header'>
-                {{ $post -> user_id }} -  {{ $post -> created }}
-            </div>
-            <div class='post-content'>
-                <img src="images/{{$post -> image }}">
-            </div>
-            <div class='post-footer'>
-                {{ $post -> content }}
-            </div>
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+                @foreach($posts as $post)
+                <div class="post-card">
+                    <div class='post-header'>
+                        {{ $post -> user_id }} -  {{ $post -> created }}
+                    </div>
+                    <div class='post-content'>
+                        <img src="images/{{$post -> image }}">
+                    </div>
+                    <div class='post-footer'>
+                        {{ $post -> content }}
+                    </div>
+                </div>
+                @endforeach              
         </div>
-        @endforeach
-
-    </body>
-</html>
+    </div>
+</div>
+@endsection

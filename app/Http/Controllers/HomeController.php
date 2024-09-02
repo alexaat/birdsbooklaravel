@@ -7,8 +7,8 @@ use App\Models\Post;
 
 class HomeController extends Controller
 {
-    public function index(){
-        //$posts = Post::all();
+    public function index()
+    {
         $posts = Post::orderBy('created', 'desc') -> get();
         return view('home', ['posts' => $posts]);
     }

@@ -5,9 +5,17 @@ namespace App\Http\Controllers\Posts;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use App\Models\Post;
+
 
 class PostController extends Controller
 {
+
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
+
     public function create(){
         return view('create_post');
     }
@@ -22,11 +30,16 @@ class PostController extends Controller
         $request->file->move(public_path('images'), $uuid);         
         
         $content = request('content');
-        
-        
-        
-        
-        error_log($uuid);
+
+        $post = new Post();
+
+        $post->content = $content;
+        $post->image = $uuid;
+        $post->user_id = 1;
+
+        error_log($post);
+        $post->save();
+
         return redirect('/');
     }
 }
