@@ -1,13 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container h-100 d-flex justify-content-center align-items-center">
     <div class="row justify-content-center">
         <div class="col-md-8">
                 @foreach($posts as $post)
-                <div class="post-card">
+                <div class="post-card shadow p-3 mb-5 bg-body rounded">
                     <div class='post-header'>
-                        {{ $post -> user_id }} -  {{ $post -> created }}
+                        <div>
+                            {{ $post -> name }} 
+                        </div>
+                        <div>
+                            {{ $post -> created }}
+                        </div>                        
                     </div>
                     <div class='post-content'>
                         <img src="images/{{$post -> image }}">

@@ -1,8 +1,65 @@
-.post-content img{
-    width: 450px;
+.post-card{
+    width: 100%;
+    margin-bottom: 36px;
+    background: #eee;
 }
 
-.link{
-    text-decoration: none;
-    
+.post-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;   
+    padding: 8px 0px;
+}
+
+.post-content img{
+    width: 100%;
+}
+
+.post-footer{
+    padding: 8px 0px;
+}
+
+.new-post-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.uploaded-file{
+    margin-bottom: 8px;
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    background-position: center;
+    background-image: url('/icons/birds.png');
+
+}
+
+.uploaded-file:hover{
+    cursor: pointer;
+}
+
+.input-file{
+    width: 100%;
+    height: 100%;
+    opacity: 0;    
+}
+
+.input-file:hover{
+    cursor: pointer;
+}
+
+.new-post-content{
+    resize: none;  
+    padding: 4px;
+    margin-bottom: 8px; 
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+.submit-button{
+    border: 1px solid #aaa;
+    height: 36px;
+    border-radius: 4px;
 }

@@ -37,7 +37,6 @@ class PostController extends Controller
         $post->image = $uuid;
         $post->user_id = 1;
 
-        error_log($post);
         $post->save();
 
         return redirect('/');
