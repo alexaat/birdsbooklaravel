@@ -19,7 +19,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style='position: fixed; width: 100%;'>
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Birds Book
@@ -62,6 +62,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/profile">
+                                        Profile
+                                    </a>    
+                                
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -78,8 +82,7 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
+        <main style='padding-top: 80px'>
             @yield('content')
         </main>
     </div>
