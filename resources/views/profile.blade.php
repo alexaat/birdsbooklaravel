@@ -21,7 +21,7 @@
                 @endif 
                 </a>  
                 
-                <div>
+                <div class='my-4'>
                     {{ $user['name'] }}   
                 </div>
 
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class='post-content'>
-                    <img src="images/{{$post -> image }}">
+                    <img src="/images/{{$post -> image }}">
                 </div>
                 <div class='post-footer'>
                     {{ $post -> content }}

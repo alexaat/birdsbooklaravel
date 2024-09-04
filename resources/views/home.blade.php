@@ -8,7 +8,8 @@
                 <div class="post-card shadow p-3 mb-5 bg-body rounded">
                     <div class='post-header'>
                         <div>
-                            {{ $post -> name }} 
+                            <a href='profile/{{$post->user_id}}' class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">{{ $post -> name }}</a>
+                           
                         </div>
                         <div>
                             {{ $post -> created }}
