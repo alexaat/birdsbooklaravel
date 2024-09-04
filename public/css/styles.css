@@ -18,6 +18,10 @@ input[type='file']::-webkit-file-upload-button {
     padding: 8px 0px;
 }
 
+.post-content {
+    width: 100%;
+}
+
 .post-content img{
     width: 100%;
 }
