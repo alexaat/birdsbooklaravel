@@ -4,19 +4,40 @@
 <div class='container-md d-flex'>
     <div class='col-md-4 d-none d-md-block'>
         <div class="position-fixed bio shadow p-3 mb-5 bg-body rounded">            
-            <a href='/profile/create' class='text-secondary' style='text-decoration: none'>
-                    @if($user['image']) 
-                        <div class='icon shadow border' style="background-image: url(/profiles/{{$user['image']}})">
-                        </div>
-                    @elseif($user['icon_letters'])
-                        <div class='icon shadow border d-flex align-items-center justify-content-center display-2'>
-                            {{ $user['icon_letters'] }}   
-                        </div>
-                    @else
-                        <div class='icon shadow border' style="background-image: url(/icons/unknown_user.png)">                        
-                        </div>
-                    @endif 
-            </a>                    
+
+            
+            @if($user['email'])
+                <a href='/profile/create' class='text-secondary' style='text-decoration: none'>
+                        @if($user['image']) 
+                            <div class='icon shadow border clickable' style="background-image: url(/profiles/{{$user['image']}})">
+                            </div>
+                        @elseif($user['icon_letters'])
+                            <div class='icon shadow border d-flex align-items-center justify-content-center display-2 clickable'>
+                                {{ $user['icon_letters'] }}   
+                            </div>
+                        @else
+                            <div class='icon shadow border clickable' style="background-image: url(/icons/unknown_user.png)">                        
+                            </div>
+                        @endif 
+                </a> 
+            @else
+                <div class='text-secondary'>
+                        @if($user['image']) 
+                            <div class='icon shadow border' style="background-image: url(/profiles/{{$user['image']}})">
+                            </div>
+                        @elseif($user['icon_letters'])
+                            <div class='icon shadow border d-flex align-items-center justify-content-center display-2'>
+                                {{ $user['icon_letters'] }}   
+                            </div>
+                        @else
+                            <div class='icon shadow border' style="background-image: url(/icons/unknown_user.png)">                        
+                            </div>
+                        @endif 
+                </div> 
+            @endif
+
+
+
             <div class='my-4'>
                 {{ $user['name'] }}   
             </div>

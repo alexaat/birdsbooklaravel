@@ -48,8 +48,9 @@ class ProfileController extends Controller
            $user['icon_letters'] = substr(Auth::user()->name, 0, 1);
         }    
 
-        return view('create_profile', ['user' => $user]);
+        error_log(Auth::id());
 
+        return view('create_profile', ['user' => $user]);
     }
 
     public function store(Request $request){
@@ -72,7 +73,9 @@ class ProfileController extends Controller
             File::delete($path);
         }
 
-        return redirect('/');
+        $id = Auth::id();
+
+        return redirect("profile/".$id);
     }
 
     public function show($id){
@@ -90,9 +93,6 @@ class ProfileController extends Controller
         ->orderBy('created', 'desc')
         ->get();
         
-        error_log($id);
-        error_log($posts);
-
         $user = ['id' => $u->id, 'name' => $u->name, 'image' => '', 'icon_letters' => '', 'email' => ''];
         
         if($u->image){
