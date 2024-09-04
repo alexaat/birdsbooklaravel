@@ -19,3 +19,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile');
 
 Route::get('/profile/create', [App\Http\Controllers\ProfileController::class, 'create'])->name('create_profile');
+
+Route::post('/profile/create', [App\Http\Controllers\ProfileController::class, 'store'])->name('create_profile');

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 
 
 class PostController extends Controller
@@ -35,7 +36,7 @@ class PostController extends Controller
 
         $post->content = $content;
         $post->image = $uuid;
-        $post->user_id = 1;
+        $post->user_id = Auth::id();
 
         $post->save();
 
