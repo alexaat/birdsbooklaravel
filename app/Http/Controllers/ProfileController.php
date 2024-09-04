@@ -16,8 +16,19 @@ class ProfileController extends Controller
         ->orderBy('created', 'desc')
         ->get();
 
-        $user = ['id' => Auth::id(), 'name' => Auth::user()->name];
+
+        $user = ['id' => Auth::id(), 'name' => Auth::user()->name, 'image' => '', 'icon_letters' => '', 'email' => ''];
+        
+        if(Auth::user()->image){
+            $user['image'] = Auth::user()->image;
+        } else {
+           $user['icon_letters'] = substr(Auth::user()->name, 0, 1);
+        }    
 
         return view('profile', ['posts' => $posts, 'user' => $user]);
+    }
+
+    public function create(){
+        return view('create_profile');
     }
 }
