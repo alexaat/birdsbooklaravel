@@ -15,7 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     dislikes.addEventListener('click', () => {
         console.log('dislikes');
     });   
-
-
 }, false);
 
