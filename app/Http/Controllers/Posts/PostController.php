@@ -27,6 +27,7 @@ class PostController extends Controller
         $uuid =  (string) Str::orderedUuid();
         $request->validate([
             'file' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'content' => 'required|string|min:3|max:2000',
         ]);
         $request->file->move(public_path('images'), $uuid);         
         
