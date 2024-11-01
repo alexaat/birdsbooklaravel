@@ -14,8 +14,9 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
 
-    <!-- Scripts -->
+    <!-- Scripts -->  
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+  
 </head>
 <body>
     <div id="app">
@@ -91,5 +92,8 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="{{asset('assets/js/app.js')}}"> </script>        
+   
 </body>
 </html>

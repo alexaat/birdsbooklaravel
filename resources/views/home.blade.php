@@ -19,10 +19,25 @@
                         <img src="images/{{$post -> image }}">
                     </div>
                     <div class='post-footer'>
-                        {{ $post -> content }}
+                        <div class='post-info'>                        
+                            <div class='likes-container'>                           
+                                <div class='likes'>
+                                    <div class='likes-amount'>16</div>
+                                    <img src='icons/like_inactive.png' alt='like icon'>
+                                </div>
+                                <div class='dislikes'>
+                                    <div class='likes-amount'>1</div>
+                                    <img src='icons/dislike_inactive.png' alt='like icon'>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            {{ $post -> content }}
+                        </div>                      
                     </div>
                 </div>
-                @endforeach              
+                @endforeach        
+               
         </div>
     </div>
 </div>

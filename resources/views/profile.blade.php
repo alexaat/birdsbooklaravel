@@ -59,7 +59,7 @@
                 <div class="post-card shadow p-3 mb-5 bg-body rounded">
                     <div class='post-header'>
                         <div>
-                        {{ $post -> name }}                    
+                            {{ $post -> name }}                    
                         </div>
                         <div>
                             {{ $post -> created }}

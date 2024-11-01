@@ -130,3 +130,56 @@ input[type='file']::-webkit-file-upload-button {
 .clickable:hover{
     cursor: pointer;
 }
+
+/* Likes */
+.post-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.likes-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    border: 1px solid #bbb;
+    border-radius: 18px;
+}
+.likes-container img{
+    width: 18px;
+    height: 18px;
+}
+.likes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0.8;
+    padding: 4px 16px;
+    border-radius: 14px 0 0 14px;
+
+}
+.dislikes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0.8;
+    padding: 4px 16px;
+    border-radius: 0 14px 14px 0;
+}
+.likes:hover{
+    opacity: 1;
+    cursor: pointer;
+    background: #bbb;
+}
+.dislikes:hover{
+    opacity: 1;
+    cursor: pointer;
+    background: #bbb;
+}
+.likes-amount{
+    padding-right: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* end Likes */
