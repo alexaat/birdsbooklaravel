@@ -23,3 +23,7 @@ Route::get('/profile/create', [App\Http\Controllers\ProfileController::class, 'c
 Route::get('/profile/{id}', [App\Http\Controllers\ProfileController::class, 'show'])->name('show');
 
 Route::post('/profile/create', [App\Http\Controllers\ProfileController::class, 'store']);
+
+Route::post('/likes', [App\Http\Controllers\LikeController::class, 'store']);
+Route::get('/likes', [App\Http\Controllers\LikeController::class, 'index']);
+
